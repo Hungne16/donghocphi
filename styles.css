@@ -1087,8 +1087,8 @@ footer {
     }
     
     /* Hide floating elements on mobile to prevent layout mess */
-    .floating-element {
-        display: none;
+    .floating-element, .particles {
+        display: none !important;
     }
     
     .marquee {
