@@ -495,15 +495,54 @@ main > section {
 
 /* Poem Section */
 .poem-section {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 4rem 0; /* Adding some vertical padding so decorations have space */
 }
 
+.poem-decoration {
+    position: absolute;
+    opacity: 0.6;
+    z-index: 0;
+    animation: float 6s ease-in-out infinite;
+    pointer-events: none;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+}
+
+.deco-1 { top: 5%; left: 10%; animation-delay: 0s; font-size: 3rem; }
+.deco-2 { top: 15%; right: 10%; animation-delay: 1s; font-size: 3.5rem; }
+.deco-3 { bottom: 10%; left: 8%; animation-delay: 2s; font-size: 4rem; }
+.deco-4 { bottom: 15%; right: 15%; animation-delay: 1.5s; font-size: 2.5rem; }
+.deco-5 { top: 45%; left: 2%; animation-delay: 0.5s; font-size: 2rem; }
+.deco-6 { top: 55%; right: 2%; animation-delay: 2.5s; font-size: 3rem; }
+
 .poem-card {
+    position: relative;
     max-width: 800px;
     padding: 4rem 3rem;
     text-align: center;
+    z-index: 1;
+}
+
+.quote-mark {
+    position: absolute;
+    font-size: 10rem;
+    color: rgba(255, 255, 255, 0.05);
+    font-family: Georgia, serif;
+    pointer-events: none;
+    line-height: 1;
+}
+
+.left-quote {
+    top: 10px;
+    left: 20px;
+}
+
+.right-quote {
+    bottom: -40px;
+    right: 20px;
 }
 
 .poem-content {
